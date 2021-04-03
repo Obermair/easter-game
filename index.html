@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <title>DEAR Christoph, HAPPY EASTER</title>
+    </head>
+<body>
+
+    <div class="canvas">
+        <div class="scrolling-area">
+            <div class="rabbit-main rabbit-floor rabbit-jump">
+                <div class="rabbit-body-part rabbit-body"></div>
+                <div class="rabbit-body-part rabbit-tail"></div>
+                <div class="rabbit-body-part rabbit-foot">
+                    <div class="foot-cover"></div>
+                </div>
+                <div class="rabbit-body-part rabbit-head"></div>
+                <div class="rabbit-body-part rabbit-ear  rabbit-ear-1">
+                    <div class="ear-cover"></div>
+                </div>
+                <div class="rabbit-body-part rabbit-ear  rabbit-ear-2">
+                    <div class="ear-cover"></div>
+                </div>
+            </div>
+            <div class="egg-outer egg-1">
+                <div class="egg-line egg-line-1"></div>
+                <div class="egg-line egg-line-2"></div>
+                <div class="egg-line egg-line-3"></div>
+                <div class="egg-line egg-line-4"></div>
+                <div class="egg-line egg-line-5"></div>
+            </div>
+            <div class="egg-outer egg-2">
+                <div class="egg-line egg-line-1"></div>
+                <div class="egg-line egg-line-2"></div>
+                <div class="egg-line egg-line-3"></div>
+                <div class="egg-line egg-line-4"></div>
+                <div class="egg-line egg-line-5"></div>
+            </div>
+            <div class="egg-outer egg-3">
+                <div class="egg-line egg-line-1"></div>
+                <div class="egg-line egg-line-2"></div>
+                <div class="egg-line egg-line-3"></div>
+                <div class="egg-line egg-line-4"></div>
+                <div class="egg-line egg-line-5"></div>
+            </div>
+            <div class="egg-outer egg-4">
+                <div class="egg-line egg-line-1"></div>
+                <div class="egg-line egg-line-2"></div>
+                <div class="egg-line egg-line-3"></div>
+                <div class="egg-line egg-line-4"></div>
+                <div class="egg-line egg-line-5"></div>
+            </div>
+        </div>
+        <div class="ground">
+        </div>
+    </div>
+    <div class="loading" >
+        <h1 style="margin-top: 10px;">DEAR CHRISTOPH, HAPPY Easter</h1>
+        <p style="margin-top: 10px;">
+            To make this year's search a little bit easier for you, I have the following easter coding challenge for you. 
+            <br><br>
+            Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
+            <br><br>
+            The distance between two points on the X-Y plane is the Euclidean distance.
+            <br><br>
+            <b>Example:</b>
+            <br>
+            Input: points = [[1,3],[-2,2]], k = 1
+            <br><br>
+            Output: [[-2,2]]
+            <br>
+            <img width="500px" src="closestplane1.jpg" alt="">
+
+
+            <br><br>
+            <b>Problem:</b>
+            <br><br>
+            Either you try to calculate each point individually or try it with some little piece of Python Code.
+            <br><br>
+            You can use the following coding playground.
+            <a href="https://code.sololearn.com/">https://code.sololearn.com/</a> <br><br>
+            <code>
+                points = [[4824, 3432], [2032, 1620], [3915, 7922], [5512,7690], [5512,7690], [3940,3108], [9624,7690], [9554,1404], [1580,6444], [8471,3975], [5512,7690], [5512,7690], [5512,7690], [1037,7448], [5512,7690], [7153,6666], [5512,7690], [2257,9301], [3634,4748], [7209,7690], [5512,6331], [1580,8087], [5243,5103], [2115,9964], [1339,6124], [5074,7690], [4054,7013], [5512,7690], [6634,7690], [1764,9584], [4824, 3432], [2032, 1620], [3915, 7922], [5512,7690], [5512,7690], [3940,3108], [9624,7690], [9554,1404], [1580,6444], [8471,3975], [5512,7690], [5512,7690], [5512,7690], [1037,7448], [5512,7690], [7153,6666], [5512,7690], [2257,9301], [3634,4748], [7209,7690], [5512,6331], [1580,8087], [2321,3837], [2115,9964], [1339,6124], [5074,7690], [4054,7013], [5512,7690], [6634,7690], [1764,9584], [4824, 3432], [2032, 1620], [3915, 7922], [5512,7690], [5512,7690], [3940,3108], [9624,7690], [9554,1404], [1580,6444], [8471,3975], [5512,7690], [5512,7690], [5512,7690], [1037,7448], [5512,7690], [7153,6666], [5512,7690], [2257,9301], [3634,4748], [7209,7690], [5512,6331], [1580,8087], [5243,5103], [2115,9964], [1339,6124], [5074,7690], [4054,7013], [5512,7690], [6634,7690], [1764,9584], [4824, 3432], [2032, 1620], [3915, 7922], [5512,7690], [5512,7690], [3940,3108], [9624,7690], [9554,1404], [1580,6444], [8471,3975], [5512,7690], [5512,7690], [5512,7690], [1037,7448], [5512,7690], [7153,6666], [5512,7690], [2257,9301], [3634,4748], [7209,7690], [5512,6331], [1580,8087], [5243,5103], [2115,9964], [1339,6124], [5074,7690], [4054,7013], [5512,7690], [6634,7690], [1764,9584], [4824, 3432], [2032, 1620], [3915, 7922], [5512,7690], [5512,7690], [3940,3108], [9624,7690], [9554,1404], [1580,6444], [8471,3975], [5512,7690], [5512,7690], [5512,7690], [1037,7448], [5512,7690], [7153,6666], [5512,7690], [2257,9301], [3634,4748], [7209,7690], [5512,6331], [1580,8087], [5243,5103], [2115,9964], [1339,6124], [5074,7690], [4054,7013], [5512,7690], [6634,7690], [1764,9584]]
+                <br><br>
+                K = 1
+                <br><br>
+                print(pClosest(points, K))
+            </code>
+
+            <br><br>
+            HAVE FUN!!!
+            <br>
+            You think you have the solution?<br>
+            x: <input id="xCord"><br>
+            y: <input id="yCord"><br>
+            <button onclick="checkPoints()">Check</button>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+    </div>
+
+</body>
+<script>
+
+function checkPoints(){
+    let x = document.getElementById("xCord").value;
+    let y = document.getElementById("yCord").value;
+    
+    if(x == '2032' && y == '1620'){
+        location.replace("congrats.html")
+    }
+    else{
+        alert("Sorry incorrect answer, Just try again!")
+    }
+}
+
+</script>
+</html>
